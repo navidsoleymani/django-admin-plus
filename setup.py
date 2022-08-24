@@ -19,5 +19,10 @@ setup(
         'djangorestframework',
         'markdown',
         'django-filter',
+        'django-cors-headers',
+        'gunicorn',
+        'Pillow',
+        'psycopg2-binary',
+        'python-dotenv',
     ],
 )
