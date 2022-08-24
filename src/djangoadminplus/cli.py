@@ -29,16 +29,15 @@ def main(
 
 
 @app.command()
-def startproject(projectname: str):
+def startproject():
     from pathlib import Path
     root_path = Path(__file__).resolve().parent
 
-    os.system(f'django-admin startproject {projectname}')
-    os.system(f'rm -r {projectname}/{projectname}')
-    os.system(f'cp -r {root_path}/repo/conf {projectname}')
-    os.system(f'cp -r {root_path}/repo/root/* {projectname}')
-    os.system(f'cp {root_path}/repo/root/.env {projectname}')
-    os.system(f'cp {root_path}/repo/root/.gitignore {projectname}')
-    os.system(f"cd {projectname} && git init && git add -A && git commit -m 'init'")
-    os.system(f'mv venv {projectname}')
-
+    os.system(f'django-admin startproject projectname')
+    os.system(f'cp -r projectname/manage.py .')
+    os.system(f'rm -r projectname')
+    os.system(f'cp -r {root_path}/repo/conf .')
+    os.system(f'cp -r {root_path}/repo/root/* .')
+    os.system(f'cp {root_path}/repo/root/.env .')
+    os.system(f'cp {root_path}/repo/root/.gitignore .')
+    os.system(f"cd git init && git add -A && git commit -m 'init'")
