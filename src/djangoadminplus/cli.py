@@ -2,7 +2,7 @@ from typing import Optional
 import sys
 import typer
 
-from src.djangoadminplus import __app_name__, __version__
+from . import __app_name__, __version__
 
 app = typer.Typer()
 
